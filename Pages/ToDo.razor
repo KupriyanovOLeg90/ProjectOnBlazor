@@ -1,0 +1,101 @@
+﻿@inject BlazorToDoListTest.Data.Repository.IRepository repository
+
+@page "/ToDo"
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2>ToDo</h2>
+
+            <h2 class="text-center">Количество незавершенных задач: @todos.Count(x => !x.IsDone)</h2>
+
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col"> Title</th>
+                        <th scope="col"> IsDone</th>
+                        <th scope="col"> </th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in todos)
+                {
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style=@(item.IsDone ? "color: green; text-decoration: line-through;" : "color: red")>
+                                    @item.Tytle
+                                </div>
+                            </td>
+                            <td>
+                                @if (!item.IsDone)
+                                {
+                                    <input type="checkbox" value="item.IsDone" @onchange="(() => StatusChanger(item))" />}
+                                else
+                                {
+                                    <input type="checkbox" value="item.IsDone" @onchange="(() => StatusChanger(item))" checked />
+                                }
+                            </td>
+                            <td>
+                                <button class="btn-danger" @onclick="(()=>DeleteItem(item))">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+
+
+            <div class="row">
+                <div class="col">
+                    <input class="form-control" @bind="NewItem" @onkeyup="@KeyPress" placeholder="null" />
+                </div>
+                <div class="col">
+                    <button class="btn-success" @onclick="AddToDo" >Add ToDo</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+    private IEnumerable<ToDoItem> todos =  new List<ToDoItem>();
+    private string NewItem;
+
+    protected override void OnInitialized()
+    {
+        todos = repository.GetAllItems();
+    }
+
+    private void StatusChanger(ToDoItem item)
+    {
+        item.IsDone = !item.IsDone;
+        repository.ValueChangedItem(item);
+    }
+
+    void KeyPress(KeyboardEventArgs e)
+    {
+        Console.WriteLine(e.Key);
+        if (e.Key == "Enter" || e.Code == "NumpadEnter")
+        {
+            AddToDo();
+        }
+    }
+
+    private void AddToDo()
+    {
+        if (!string.IsNullOrWhiteSpace(NewItem))
+        {
+            repository.AddToDo(NewItem);
+            NewItem = string.Empty;
+        }
+    }
+
+    private void DeleteItem(ToDoItem item)
+    {
+        repository.DeleteItem(item.Id);
+    }
+}
