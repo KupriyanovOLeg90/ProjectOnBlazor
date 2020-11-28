@@ -1,7 +1,57 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<div class="row">
+    <div class="col text-center">
+        <h1>Welcome to my first Blazor project</h1>
 
-Welcome to your new app.
+    </div>
+</div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+
+<div class="row">
+    <div class="col text-center">
+        <h1> Show all Games in mock DB: </h1>
+    </div>
+</div>
+
+<GameListTable Games="games" />
+
+<IndividualGame IsTable="false"  Game="oneGameToShow" IsVisibleButtons="true"  SwichGame="ShowNewGame" />
+
+@code{
+        List<Game> games;
+
+        Random rnd;
+
+        Game oneGameToShow;
+
+    protected override void OnInitialized()
+    {
+        games = new List<Game>() {
+            new Game() {Name = "PUGN", Genre = "Action", ReleaseDate = new DateTime(2010, 5, 4) },
+            new Game() {Name = "StarCraft", Genre = "Stategy", ReleaseDate = new DateTime(1995, 1, 4) },
+            new Game() {Name = "THe Wicher 3", Genre = "RPG", ReleaseDate = new DateTime(2015, 5, 3) } };
+
+
+        rnd = new Random(DateTime.Now.Millisecond);
+        oneGameToShow = games[rnd.Next(0, games.Count())];
+    }
+
+    void ShowNewGame()
+    {
+        oneGameToShow = SwichGame();
+    }
+
+    Game SwichGame()
+    {
+        Game tempGame;
+        if (games.Count() > 1)
+            tempGame = games[rnd.Next(0, games.Count())];
+        else if (games.Count() == 1)
+            tempGame = games[0];
+        else
+            return new Game() { Name = "No Items in Arrey", Genre = "", ReleaseDate=DateTime.Now};
+
+        return tempGame;
+    }
+}

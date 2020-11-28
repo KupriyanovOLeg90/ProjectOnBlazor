@@ -1,10 +1,10 @@
-﻿using BlazorToDoListTest.Models;
+﻿using BlazorTraning.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorToDoListTest.Data.Repository
+namespace BlazorTraning.Data.Repository
 {
     public interface IRepository 
     {

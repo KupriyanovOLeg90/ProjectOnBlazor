@@ -1,8 +1,8 @@
-﻿using BlazorToDoListTest.Models;
+﻿using BlazorTraning.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlazorToDoListTest.Data.Repository
+namespace BlazorTraning.Data.Repository
 {
     public class SQLRepository : IRepository
     {

@@ -1,4 +1,4 @@
-using BlazorToDoListTest.Data;
+using BlazorTraning.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -11,9 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using BlazorToDoListTest.Data.Repository;
+using BlazorTraning.Data.Repository;
 
-namespace BlazorToDoListTest
+namespace BlazorTraning
 {
     public class Startup
     {

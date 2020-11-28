@@ -1,0 +1,50 @@
+﻿
+@code {
+
+}
+
+<div class="table-responsive">
+    <table class="table table-striped ">
+        <thead class="thead-light text-center">
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Realese Date</th>
+                <th>
+                    <input type="checkbox" class="form-check" @bind="isVisibleButtons"/>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Games == null)
+            {
+                <tr>Loading DATA</tr>
+            }
+            else if (Games.Count() == 0)
+            {
+                <tr>NO Items in array</tr>
+            }
+            else 
+            { 
+                @foreach (var item in Games)
+                {
+                    <IndividualGame Game="item" IsTable="true" IsVisibleButtons="isVisibleButtons" DeleteGame="DeledeTheGame"/>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
+
+@code{
+    [Parameter]
+    public List<Game> Games { get; set; }
+
+    bool isVisibleButtons { get; set; } = false;
+
+
+    void DeledeTheGame(Game game)
+    {
+        Games.Remove(game);
+    }
+}

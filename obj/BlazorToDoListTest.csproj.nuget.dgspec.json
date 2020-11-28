@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj": {}
+    "F:\\Progects\\ProjectOnBlazor\\BlazorToDoListTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj": {
+    "F:\\Progects\\ProjectOnBlazor\\BlazorToDoListTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj",
+        "projectUniqueName": "F:\\Progects\\ProjectOnBlazor\\BlazorToDoListTest.csproj",
         "projectName": "BlazorToDoListTest",
-        "projectPath": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj",
+        "projectPath": "F:\\Progects\\ProjectOnBlazor\\BlazorToDoListTest.csproj",
         "packagesPath": "C:\\Users\\Terla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\obj\\",
+        "outputPath": "F:\\Progects\\ProjectOnBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Terla\\AppData\\Roaming\\NuGet\\NuGet.Config",

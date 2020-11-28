@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorToDoListTest.Models
+namespace BlazorTraning.Models
 {
     public class ToDoItem
     {

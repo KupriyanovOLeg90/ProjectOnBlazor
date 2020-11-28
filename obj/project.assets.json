@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj",
-      "projectName": "BlazorToDoListTest",
-      "projectPath": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\BlazorToDoListTest.csproj",
+      "projectUniqueName": "F:\\Progects\\ProjectOnBlazor\\BlazorTraning.csproj",
+      "projectName": "BlazorTraning",
+      "projectPath": "F:\\Progects\\ProjectOnBlazor\\BlazorTraning.csproj",
       "packagesPath": "C:\\Users\\Terla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Terla\\source\\repos\\BlazorToDoListTest\\obj\\",
+      "outputPath": "F:\\Progects\\ProjectOnBlazor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Terla\\AppData\\Roaming\\NuGet\\NuGet.Config",

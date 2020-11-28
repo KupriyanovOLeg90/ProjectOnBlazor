@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BlazorToDoListTest.Migrations
+namespace BlazorTraning.Migrations
 {
     public partial class InitDB : Migration
     {

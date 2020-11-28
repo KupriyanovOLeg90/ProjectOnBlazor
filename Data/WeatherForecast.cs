@@ -1,6 +1,6 @@
 using System;
 
-namespace BlazorToDoListTest.Data
+namespace BlazorTraning.Data
 {
     public class WeatherForecast
     {

@@ -1,11 +1,11 @@
-﻿using BlazorToDoListTest.Models;
+﻿using BlazorTraning.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorToDoListTest.Data
+namespace BlazorTraning.Data
 {
     public class DB : DbContext
     {
