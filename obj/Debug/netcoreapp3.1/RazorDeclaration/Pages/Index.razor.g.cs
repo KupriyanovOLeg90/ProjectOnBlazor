@@ -91,16 +91,18 @@ using BlazorTraning.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "F:\Progects\ProjectOnBlazor\Pages\Index.razor"
+#line 22 "F:\Progects\ProjectOnBlazor\Pages\Index.razor"
       
-        List<Game> games;
+    List<Game> games;
 
-        Random rnd;
+    Random rnd;
 
-        Game oneGameToShow;
+    Game oneGameToShow;
 
-    protected override void OnInitialized()
+    protected async override Task OnInitializedAsync()
     {
+        await Task.Delay(2000);
+
         games = new List<Game>() {
             new Game() {Name = "PUGN", Genre = "Action", ReleaseDate = new DateTime(2010, 5, 4) },
             new Game() {Name = "StarCraft", Genre = "Stategy", ReleaseDate = new DateTime(1995, 1, 4) },

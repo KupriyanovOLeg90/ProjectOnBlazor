@@ -97,3 +97,5 @@ F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\BlazorTraning.csproj.CopyCom
 F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\BlazorTraning.dll
 F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\BlazorTraning.pdb
 F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\BlazorTraning.genruntimeconfig.cache
+F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\GenericList.razor.g.cs
+F:\Progects\ProjectOnBlazor\obj\Debug\netcoreapp3.1\Razor\Shared\GenericList.razor.g.cs

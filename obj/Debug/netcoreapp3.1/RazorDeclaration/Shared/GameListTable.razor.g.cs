@@ -90,13 +90,12 @@ using BlazorTraning.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "F:\Progects\ProjectOnBlazor\Shared\GameListTable.razor"
+#line 25 "F:\Progects\ProjectOnBlazor\Shared\GameListTable.razor"
       
     [Parameter]
     public List<Game> Games { get; set; }
 
     bool isVisibleButtons { get; set; } = false;
-
 
     void DeledeTheGame(Game game)
     {
